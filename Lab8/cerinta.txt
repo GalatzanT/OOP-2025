@@ -1,0 +1,28 @@
+﻿Cerințe generale:
+• Fără memory leak.
+• Test Code Coerage >99% pe tot codul in afara de UI
+• Compilatorul setat la „treat Warning as Errors”, Warning Level /W4
+• Soluționat majoritatea erorilor raportate de linter: Activat „code analysis on
+build” selectat „"C++ Core Check rules". Va încurajez ca la fiecare
+eroare/sugestie raportata sa citiți partea relevanta din guidline (eroarea din VS
+oferă un link către secțiune), este e metoda buna pentru a explora limbajul
+C++. Daca va merge greu compilarea puteți sa activați doar din când in când
+analiza pentru a vedea ce erori raportează.
+
+Cerințe Iterația 1:
+• Modificați aplicația: folosiți clasa vector din STL si înlocuiți toate for-urile din
+aplicație cu algoritmi din STL si varianta c++11 de for (range for). Exemplu
+de algoritmi: copy_if (la filtrare), find_if (căutare), sort
+• Folosiți excepții pentru a raporta erori (creați clase proprii pentru excepții).
+• Adăugați funcționalitatea noua (descris la fiecare problema).
+• Pentru a alege aleator elemente puteți folosi:
+
+#include <random>
+std::mt19937 mt{ std::random_device{}() };
+std::uniform_int_distribution<> dist(0, v.size()-1);
+int rndNr = dist(mt);// numar aleator intre [0,size-1]
+#include <algorithm>
+#include <random> // std::default_random_engine
+#include <chrono> // std::chrono::system_clock
+auto seed = std::chrono::system_clock::now().time_since_epoch().count();
+std::shuffle(v.begin(),v.end(), std::default_random_engine(seed)); //amesteca vectorul v
