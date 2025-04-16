@@ -1,0 +1,29 @@
+
+#include <assert.h>
+#include <string.h>
+#include "repo.h"
+#include "service.h"
+
+void testCreeazaOferta();
+void testValideazaOferta();
+void testgetId();
+void testgetPret();
+void testsetId();
+void testsetPret();
+void testCopyOferta();
+void testCreeazaOferte();
+void testAddEntitate();
+void testDeleteEntitate();
+void testUpdateEntitate();
+void testFilterPret();
+void testSortPret();
+void testSortTip();
+void testAddEnt();
+void testDeleteEnt();
+void testUpdateEnt();
+void testcmpPret();
+void testcmpPretDesc();
+void testcmpTipDest();
+void testsortPretDesc();
+void testsortTipDest();
+void run_all_tests();
