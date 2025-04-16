@@ -7,6 +7,6 @@ Lab2-4 prob: 10
 
 Lab5 prob: 10
 
-Lab6, Lab7, Lab8 prob: 7
+Lab6, 7, 8 prob: 7
 
 
